@@ -4,12 +4,12 @@ import { ShoppingCart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const products = [
-  { id: 1, name: 'Spinach', price: 2.99, image: '/placeholder.svg?height=200&width=200' },
-  { id: 2, name: 'Kale', price: 3.49, image: '/placeholder.svg?height=200&width=200' },
-  { id: 3, name: 'Lettuce', price: 1.99, image: '/placeholder.svg?height=200&width=200' },
-  { id: 4, name: 'Arugula', price: 2.79, image: '/placeholder.svg?height=200&width=200' },
-  { id: 5, name: 'Swiss Chard', price: 3.29, image: '/placeholder.svg?height=200&width=200' },
-  { id: 6, name: 'Collard Greens', price: 2.89, image: '/placeholder.svg?height=200&width=200' },
+  { id: 1, name: 'Spinach', price: 2.99, image: '/images/products/Spinach.jpg?height=200&width=200' },
+  { id: 2, name: 'Kale', price: 3.49, image: '/images/products/Kale.jpg?height=200&width=200' },
+  { id: 3, name: 'Lettuce', price: 1.99, image: '/images/products/Lettuce.jpg?height=200&width=200' },
+  { id: 4, name: 'Arugula', price: 2.79, image: '/images/products/Arugula.jpg?height=200&width=200' },
+  { id: 5, name: 'Swiss Chard', price: 3.29, image: '/images/products/SwissChard.jpg?height=200&width=200' },
+  { id: 6, name: 'Collard Greens', price: 2.89, image: '/images/products/CollardGreens.jpg?height=200&width=200' },
 ]
 
 export default function StorePage() {
@@ -29,9 +29,9 @@ export default function StorePage() {
 
       <main className="container mx-auto py-8">
         <h1 className="text-3xl font-bold mb-6">Our Fresh Greens</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {products.map((product) => (
-            <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden transform  shadow-xl transition duration-300 hover:scale-105">
               <Image
                 src={product.image}
                 alt={product.name}
